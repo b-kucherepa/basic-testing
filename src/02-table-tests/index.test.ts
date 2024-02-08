@@ -40,8 +40,8 @@ describe('simpleCalculator', () => {
     { a: -2, b: -5, action: Action.Exponentiate, expected: -0.03125 },
     { a: 2, b: 2, action: '$', expected: null },
     { a: 1, b: 'value', action: Action.Add, expected: null },
-    { a: 'the', b: 2, action: Action.Add, expected: null },
-    { a: 'the', b: 'value', action: Action.Add, expected: null }
+    { a: '1', b: 2, action: Action.Add, expected: null },
+    { a: 'a', b: 'value', action: Action.Add, expected: null }
   ];
 
   test.each(testCases) ('should return "$expected" after operation "$action" with args "$a" and "$b"', ({a, b, action, expected})=> {
